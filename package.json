@@ -1,0 +1,99 @@
+{
+    "name": "@xhiti/local-ai",
+    "version": "0.1.0",
+    "description": "Privacy-first AI skills for React applications. Zero backend, zero costs, 100% privacy. Run summarization, translation, speech recognition, and computer vision entirely in the browser.",
+    "author": "xhiti",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xhiti/local-ai"
+    },
+    "keywords": [
+        "ai",
+        "machine-learning",
+        "react",
+        "hooks",
+        "privacy",
+        "offline",
+        "webgpu",
+        "wasm",
+        "transformers",
+        "huggingface",
+        "summarization",
+        "translation",
+        "speech-recognition",
+        "text-to-speech",
+        "object-detection",
+        "ocr",
+        "semantic-search",
+        "embeddings",
+        "nextjs",
+        "browser",
+        "client-side"
+    ],
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./core": {
+            "import": "./dist/core/index.js",
+            "types": "./dist/core/index.d.ts"
+        },
+        "./hooks": {
+            "import": "./dist/hooks/index.js",
+            "types": "./dist/hooks/index.d.ts"
+        },
+        "./components": {
+            "import": "./dist/components/index.js",
+            "types": "./dist/components/index.d.ts"
+        },
+        "./worker": {
+            "import": "./dist/worker/index.js",
+            "types": "./dist/worker/index.d.ts"
+        },
+        "./styles.css": "./dist/styles.css"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "eslint src --ext .ts,.tsx",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf dist",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0",
+        "react-dom": ">=18.0.0"
+    },
+    "dependencies": {
+        "@huggingface/transformers": "^3.8.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "eslint": "^8.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
